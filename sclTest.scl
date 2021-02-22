@@ -1,0 +1,67 @@
+import "scl.h"
+
+description
+	Program: sclTest.scl
+	This program computes the sum of values in an array of integers.
+*/
+
+symbol MM 45
+
+forward declarations
+function sum_array return type integer
+ parameters
+ 		a array[] type integer,
+ 		num_elements type integer
+
+global declarations
+constants
+	define MAX = 10 type integer
+	define ARRAY_SIZE = 20 type integer
+variables
+	define varm2 array[MM] type integer
+	define var3 type integer
+
+
+description
+  This program computes the sum of values in an array. */
+  function main is
+    variables
+       define sarray array [MAX] of type integer
+       define sum_val type integer
+       define kelements type integer
+       define j type integer
+       define mybhvar type integer
+       define myivhar type integer
+    begin
+       input "Number of elements: ", kelements
+       for j = 0 to kelements -1 do
+           input "Enter element int value: ", marray [j]
+       endfor
+       set sum_val = sum_array(sarray, kelements)
+       display "Sum: ", sum_val
+       exit
+   endfun main
+
+   description
+     The following is the function definition which finds the sum of the values in an array. The function takes in 2 arguments, the array and the number of elements in the array. */
+
+     function sum_array return type integer
+      parameters
+      	  a array[] type integer,
+      	  num_elements type integer
+      is
+      variables
+          define i type integer
+          define sum_element type integer
+          define hh type integer
+      begin
+          set i = 1
+          set sum_element = a[0]
+          display "Initial sum_element: ", sum_element
+          for i to num_elements -1 do
+              set sum_element = sum_element + a[i]
+          endfor
+          return sum_element
+      endfun sum_array
+
+
