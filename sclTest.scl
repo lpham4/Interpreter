@@ -1,8 +1,3 @@
-// CS 4308 Section 02 Spring 2021
-// Dona Young, Alex Jarvis, Ly Pham
-// Date: 02/22/21
-// SCL program to test
-
 
 import "scl.h"
 implementations
@@ -10,9 +5,9 @@ function main is
 variables
 	define MAX = 5 type integer
 	define sarray array [MAX] type integer
-        define sum_val type integer
-        define i type integer
-        define j type integer
+    define sum_val type integer
+    define i type integer
+    define j type integer
 begin
 	set j = 0
         for j to MAX -1 do

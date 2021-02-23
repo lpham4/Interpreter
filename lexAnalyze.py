@@ -4,7 +4,7 @@ Donna Young, Alex Jarvis, Ly Pham
 Project 1st Deliverable
 Date: 02/22/2021
 '''
-from token import *
+from Token import *
 
 # This is the dictionary that contains the keywords and operators used
 lexAnalyze = {
@@ -46,19 +46,20 @@ def tokenize(word):
 
     # Test to see if word is a keyword
     if word in lexAnalyze["keywords"]:
-        newToken = token(word, "keyword", lexAnalyze["keywords"][word])
-        return newToken
+        newToken = Token(word, "keyword")
+        return(newToken.printToken())
 
     # Test to see if word is an operator
     if word in lexAnalyze["operators"]:
-        newToken = token(word, "arithmetic operator", lexAnalyze["operators"][word])
-        return newToken
+        newToken = Token(word, "arithmetic operator")
+        return(newToken.printToken())
 
     # Test to see if word is a string
-    if(word.contains("\"")):
-        newToken = token(word, "string literal", 27)
-        return newToken
+    if("\"" in word):
+        newToken = Token(word, "string literal")
+        return(newToken.printToken())
 
     # Else, word is an identifier
-    newToken = token(word, "identifier", 28)
-    return newToken
+    else: 
+    	newToken = Token(word, "identifier")
+    	print(newToken.printToken())
