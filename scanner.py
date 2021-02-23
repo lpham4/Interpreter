@@ -7,7 +7,7 @@ Date: 02/22/2021
 from Token import *
 from lexAnalyze import *
 
-testFile = open("/Users/lypham/Desktop/Interpreter/sclTest.scl", "r")
+testFile = open("sclTest.scl", "r")
 for line in testFile:
 	for word in line.split():
 		print(tokenize(word))

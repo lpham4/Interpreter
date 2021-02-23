@@ -51,7 +51,7 @@ def tokenize(word):
 
     # Test to see if word is an operator
     if word in lexAnalyze["operators"]:
-        newToken = Token(word, "arithmetic operator")
+        newToken = Token(word, "operator")
         return(newToken.printToken())
 
     # Test to see if word is a string
