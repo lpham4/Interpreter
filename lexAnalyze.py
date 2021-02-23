@@ -46,12 +46,12 @@ def tokenize(word):
 
     # Test to see if word is a keyword
     if word in lexAnalyze["keywords"]:
-        newToken = token(word, "keyword", lexicalAnalyzer["keywords"][word])
+        newToken = token(word, "keyword", lexAnalyze["keywords"][word])
         return newToken
 
     # Test to see if word is an operator
     if word in lexAnalyze["operators"]:
-        newToken = token(word, "arithmetic operator", lexicalAnalyzer["arithOps"][word])
+        newToken = token(word, "arithmetic operator", lexAnalyze["operators"][word])
         return newToken
 
     # Test to see if word is a string
