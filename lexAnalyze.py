@@ -9,34 +9,34 @@ from Token import *
 # This is the dictionary that contains the keywords and operators used
 lexAnalyze = {
     "keywords": {
-        'array': 1,
-        'begin': 2,
-        'define': 3,
-        'display': 4,
-        'do': 5,
-        'endfor': 6,
-        'endfun': 8,
-        'exit': 9,
-        'for': 10,
-        'function': 11,
-        'import': 12,
-        'input': 13,
-        'integer': 14,
-        'is': 15,
-        'main': 16,
-        'return': 17,
-        'set': 18,
-        'symbol': 19,
-        'to': 20,
-        'type': 21,
-        'variables': 22,
-        'implementations': 23
+        'array': 'array',
+        'begin': 'begin',
+        'define': 'define',
+        'display': 'display',
+        'do': 'do',
+        'endfor': 'endfor',
+        'endfun': 'endfun',
+        'exit': 'exit',
+        'for': 'for',
+        'function': 'function',
+        'import': 'import',
+        'input': 'input',
+        'integer': 'integer',
+        'is': 'is',
+        'main': 'main',
+        'return': 'return',
+        'set': 'set',
+        'symbol': 'symbol',
+        'to': 'to',
+        'type': 'type',
+        'variables': 'variables',
+        'implementations': 'implementations'
     },
 
       "operators": {
-        '+': 24,
-        '-': 25,
-        '=': 26
+        '+': '+',
+        '-': '-',
+        '=': '='
     }
 }
 
@@ -47,19 +47,19 @@ def tokenize(word):
     # Test to see if word is a keyword
     if word in lexAnalyze["keywords"]:
         newToken = Token(word, "keyword")
-        return(newToken.printToken())
+        return (newToken.printToken())
 
     # Test to see if word is an operator
-    if word in lexAnalyze["operators"]:
+    elif word in lexAnalyze["operators"]:
         newToken = Token(word, "operator")
-        return(newToken.printToken())
+        return (newToken.printToken())
 
     # Test to see if word is a string
-    if("\"" in word):
+    elif("\"" in word):
         newToken = Token(word, "string literal")
-        return(newToken.printToken())
+        return (newToken.printToken())
 
     # Else, word is an identifier
     else: 
     	newToken = Token(word, "identifier")
-    	print(newToken.printToken())
+    	return (newToken.printToken())
