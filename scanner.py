@@ -8,7 +8,7 @@ from Token import *
 from lexAnalyze import *
 
 
-fileName = open("/Users/lypham/Desktop/Interpreter/sclTest.scl", "r")
+fileName = open("sclTest.scl", "r")
 for line in fileName:
 	for word in line.split():
 		print(tokenize(word))
