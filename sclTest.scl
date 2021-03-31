@@ -3,23 +3,14 @@ import "scl.h"
 implementations
 function main is
 variables
-    define MAX = 5 type integer
-    define sarray array [MAX] type integer
     define sum_val type integer
     define i type integer
     define j type integer
 begin
-	set j = 0
-        for j to MAX -1 do
-        	set marray [j] = 1
-        endfor
-	set i = 1
-        set sum_val = sarray[0]
-	for i to MAX -1 do
-		set sum_val = sum_val + sarray[i]
-	endfor
-	return sum_val
-        display "Sum:", sum_val
+    set j = 2
+    set i = 1
+    set sum_val = j + i
+    display "Sum:", sum_val
 endfun main
 
 
