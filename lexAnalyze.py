@@ -30,14 +30,37 @@ lexAnalyze = {
         'to': 'to',
         'type': 'type',
         'variables': 'variables',
-        'implementations': 'implementations'
+        'implementations': 'implementations',
+        'if': 'if',
+        'endif': 'endif',
+        'else': 'else',
+        'constants': 'constants',
+        'declarations': 'declarations',
+        'global': 'global',
+        'main': 'main',
+        'parameters': 'parameters',
+        'struct': 'struct',
+        'then': 'then',
+        'while': 'while'
     },
 
-      "operators": {
+    "operators": {
         '+': '+',
         '-': '-',
-        '=': '='
+        '=': '=',
+        '*': '*',
+        '>': '>',
+        '<': '<',
+        '>=': '>=',
+        '<=': '<=',
+        '==': '=='
+    },
+
+    "others": {
+        ',': ','
     }
+
+
 }
 
 
@@ -63,3 +86,6 @@ def tokenize(word):
     else: 
     	newToken = Token(word, "identifier")
     	return (newToken.printToken())
+
+def getDict():
+    return lexAnalyze

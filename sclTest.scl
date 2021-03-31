@@ -3,8 +3,8 @@ import "scl.h"
 implementations
 function main is
 variables
-	define MAX = 5 type integer
-	define sarray array [MAX] type integer
+    define MAX = 5 type integer
+    define sarray array [MAX] type integer
     define sum_val type integer
     define i type integer
     define j type integer

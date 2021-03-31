@@ -7,9 +7,18 @@ Date: 02/22/2021
 from Token import *
 from lexAnalyze import *
 
+class scanner:
+	def __init__(self, fileName):
+		self.fileName = fileName
 
-fileName = open("sclTest.scl", "r")
-for line in fileName:
-	for word in line.split():
-		print(tokenize(word))
+	def getfileName(self):
+		return self.fileName
 
+	def scanning(self):
+		fileName = open("sclTest.scl", "r")
+		for line in fileName:
+			for word in line.split():
+				print(tokenize(word))
+
+#testScan = scanner("sclTest.scl")
+#testScan.scanning()
