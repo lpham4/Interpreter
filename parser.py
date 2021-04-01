@@ -14,12 +14,9 @@ class parser:
 
 
 	def parse(self):
-		#testScan = scanner("sclTest.scl")
-		#testScan.scanning() 
-		fileName = self.scanner.getfileName()
-		file = open(fileName, 'r')
-		for line in file:
-			print(line.split())
+		testScan = scanner("sclTest.scl")
+		testScan.scanning() 
+		
 
 
 
