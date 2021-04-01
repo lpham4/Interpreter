@@ -9,55 +9,29 @@ from Token import *
 # This is the dictionary that contains the keywords and operators used
 lexAnalyze = {
     "keywords": {
-        'array': 'array',
-        'begin': 'begin',
-        'define': 'define',
-        'display': 'display',
-        'do': 'do',
-        'endfor': 'endfor',
-        'endfun': 'endfun',
-        'exit': 'exit',
-        'for': 'for',
-        'function': 'function',
-        'import': 'import',
-        'input': 'input',
-        'integer': 'integer',
-        'is': 'is',
-        'main': 'main',
-        'return': 'return',
-        'set': 'set',
-        'symbol': 'symbol',
-        'to': 'to',
-        'type': 'type',
-        'variables': 'variables',
-        'implementations': 'implementations',
-        'if': 'if',
-        'endif': 'endif',
-        'else': 'else',
-        'constants': 'constants',
-        'declarations': 'declarations',
-        'global': 'global',
-        'main': 'main',
-        'parameters': 'parameters',
-        'struct': 'struct',
-        'then': 'then',
-        'while': 'while'
+        'begin': 11,
+        'define': 12,
+        'display': 13,
+        'endfun': 14,
+        'for': 15,
+        'function': 16,
+        'import': 17,
+        'integer': 18,
+        'main': 19,
+        'set': 20,
+        'type': 21,
+        'variables': 22,
+        'implementations': 23,
+        'main': 24
     },
 
     "operators": {
-        '+': '+',
-        '-': '-',
-        '=': '=',
-        '*': '*',
-        '>': '>',
-        '<': '<',
-        '>=': '>=',
-        '<=': '<=',
-        '==': '=='
+        '+': 25,
+        '=': 26
     },
 
     "others": {
-        ',': ','
+        ',': 27
     }
 
 
