@@ -5,6 +5,7 @@ Project 1st Deliverable
 Date: 02/22/2021
 '''
 from Token import *
+tokens = []
 
 # This is the dictionary that contains the keywords and operators used
 lexAnalyze = {
@@ -31,34 +32,41 @@ lexAnalyze = {
     },
 
     "others": {
-        ',': 27
+        ',': 27,
+        '\"': 28
     }
 
 
 }
 
+def getRules():
+    return lexAnalyze
+
 
 # Method to turn a word from the file into a Token
 def tokenize(word):
-
     # Test to see if word is a keyword
     if word in lexAnalyze["keywords"]:
         newToken = Token(word, "keyword")
+        tokens.append(newToken)
         return (newToken.printToken())
 
     # Test to see if word is an operator
     elif word in lexAnalyze["operators"]:
         newToken = Token(word, "operator")
+        tokens.append(newToken)
         return (newToken.printToken())
 
     # Test to see if word is a string
     elif("\"" in word):
         newToken = Token(word, "string literal")
+        tokens.append(newToken)
         return (newToken.printToken())
 
     # Else, word is an identifier
     else: 
     	newToken = Token(word, "identifier")
+        tokens.append(newToken)
     	return (newToken.printToken())
 
 def getDict():

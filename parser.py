@@ -6,6 +6,7 @@ Date: 03/27/2021
 '''
 from scanner import *
 from lexAnalyze import *
+from Token import *
 
 class parser:
 
@@ -16,7 +17,11 @@ class parser:
 	def parse(self):
 		testScan = scanner("sclTest.scl")
 		testScan.scanning() 
-		
+		print("Tokens in list: ", len(tokens))
+
+
+
+
 
 
 
