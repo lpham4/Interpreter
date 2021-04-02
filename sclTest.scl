@@ -9,8 +9,7 @@ define j type integer
 begin
 set j = 2
 set i = 1
-set sum_val = j + i
-display "Sum:", sum_val
+display j + 1 
 endfun main
 
 

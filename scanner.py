@@ -4,7 +4,8 @@ Donna Young, Alex Jarvis, Ly Pham
 Project 1st Deliverable
 Date: 02/22/2021
 '''
-from Token import *
+
+
 from lexAnalyze import *
 
 class scanner:

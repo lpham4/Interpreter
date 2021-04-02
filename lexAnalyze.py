@@ -2,7 +2,7 @@
 CS 4308 Section 02 Spring 2021
 Donna Young, Alex Jarvis, Ly Pham
 Project 1st Deliverable
-Date: 02/22/2021
+Date: 03/30/2021
 '''
 from Token import *
 tokens = []
@@ -23,7 +23,7 @@ lexAnalyze = {
         'type': 21,
         'variables': 22,
         'implementations': 23,
-        'main': 24
+        'is': 24
     },
 
     "operators": {
@@ -33,7 +33,8 @@ lexAnalyze = {
 
     "others": {
         ',': 27,
-        '\"': 28
+        '\"': 28,
+        'identifier': 29
     }
 
 
@@ -47,27 +48,26 @@ def getRules():
 def tokenize(word):
     # Test to see if word is a keyword
     if word in lexAnalyze["keywords"]:
-        newToken = Token(word, "keyword")
+        newToken = Token(word, "keyword", lexAnalyze["keywords"][word])
         tokens.append(newToken)
         return (newToken.printToken())
 
     # Test to see if word is an operator
     elif word in lexAnalyze["operators"]:
-        newToken = Token(word, "operator")
+        newToken = Token(word, "operator", lexAnalyze["operators"][word])
         tokens.append(newToken)
         return (newToken.printToken())
 
     # Test to see if word is a string
     elif("\"" in word):
-        newToken = Token(word, "string literal")
+        newToken = Token(word, "string literal", lexAnalyze["others"]["\""])
         tokens.append(newToken)
         return (newToken.printToken())
 
     # Else, word is an identifier
-    else: 
-    	newToken = Token(word, "identifier")
+    else:
+        newToken = Token(word, "identifier", 29)
         tokens.append(newToken)
-    	return (newToken.printToken())
+        return (newToken.printToken())
 
-def getDict():
-    return lexAnalyze
+
