@@ -2,7 +2,7 @@
 CS 4308 Section 02 Spring 2021
 Donna Young, Alex Jarvis, Ly Pham
 Project 1st Deliverable
-Date: 03/30/2021
+Date: 02/22/2021
 '''
 from Token import *
 tokens = []
@@ -70,4 +70,5 @@ def tokenize(word):
         tokens.append(newToken)
         return (newToken.printToken())
 
-
+def getDict():
+    return lexAnalyze
